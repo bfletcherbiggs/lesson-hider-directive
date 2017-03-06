@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <title>TITLE</title>
+     <meta name="description" content="DESCRIPTION">
+    <!-- <link rel="stylesheet" href="PATH"> -->
+
+     <!--[if lt IE 9]>
+       <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+ </head>
+
+ <body ng-app="directivePractice">
+
+   <div ng-controller="lessonCtrl">
+    <div>
+      {{test}}
+    </div>
+    <ul>
+      <lesson-hider ng-repeat="lesson in lessons" lesson="lesson" day-alert="announceDay(lesson,day)"></lesson-hider>
+    </ul>
+
+   </div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+ <script src="app.js"></script>
+ <script src="lessonService.js"></script>
+ <script src="lessonCtrl.js"></script>
+ <script src="lessonHider.js"></script>
+ </body>
+
+ </html>
